@@ -30,6 +30,15 @@ export default function Index() {
       >
         Throw error
       </button>
+
+      <button
+        type="button"
+        onClick={() => {
+          throw new Error("67");
+        }}
+      >
+        Throw error 2
+      </button>
     </>
   );
 }
