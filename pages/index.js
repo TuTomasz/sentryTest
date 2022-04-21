@@ -1,5 +1,7 @@
+import { useEffect } from "react/cjs/react.production.min";
 import useSWR from "swr";
 import Person from "../components/Person";
+
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -10,7 +12,11 @@ export default function Index() {
     console.log("test");
     alert("test");
   };
-
+  let test2 = () => {
+    console.log("test2");
+    throw new Error("jghjhgj");
+  };
+  ß
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
 
@@ -33,9 +39,7 @@ export default function Index() {
 
       <button
         type="button"
-        onClick={() => {
-          throw new Error("67");
-        }}
+        onClick={test2}
       >
         Throw error 2
       </button>
