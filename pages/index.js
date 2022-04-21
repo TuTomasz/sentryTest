@@ -16,7 +16,7 @@ export default function Index() {
     console.log("test2");
     throw new Error("jghjhgj");
   };
-  ß
+  
   if (error) return <div>Failed to load</div>;
   if (!data) return <div>Loading...</div>;
 
