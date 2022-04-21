@@ -8,5 +8,6 @@ export default function personHandler({ query: { id } }, res) {
     res.status(200).json(filtered[0])
   } else {
     res.status(404).json({ message: `User with id: ${id} not found.` })
+    
   }
 }

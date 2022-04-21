@@ -45,6 +45,15 @@ export default function Person() {
           <td>{data.gender}</td>
         </tr>
       </tbody>
+      <button
+        type="button"
+        onClick={() => {
+          throw new Error("Sentry Frontend Person error");
+        }}
+      >
+        internal
+      </button>
+      
     </table>
   )
 }
